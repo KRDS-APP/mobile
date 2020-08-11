@@ -11,6 +11,9 @@ const AuthRoutes: React.FC = () => (
   <Auth.Navigator
     screenOptions={{
       headerShown: false,
+      cardStyle: {
+        backgroundColor: "#FFF",
+      },
     }}
   >
     <Auth.Screen name="Landing" component={LandingPage} />
