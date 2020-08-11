@@ -1,17 +1,18 @@
 import React from "react";
 import { StatusBar } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
 
-import LandingPage from "./src/pages/LandingPage";
+import Routes from "./src/routes";
 
 export default function App() {
   return (
-    <>
+    <NavigationContainer>
       <StatusBar
         barStyle="dark-content"
         backgroundColor="transparent"
         translucent
       />
-      <LandingPage />
-    </>
+      <Routes />
+    </NavigationContainer>
   );
 }

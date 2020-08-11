@@ -3,7 +3,7 @@ import { View, Image, Text, TouchableOpacity, StyleSheet } from "react-native";
 
 const logo = require("../../img/krds-logo.svg");
 
-const LandingPage = () => {
+const LandingPage = ({ navigation }) => {
   return (
     <View>
       <View style={styles.container}>
@@ -16,14 +16,20 @@ const LandingPage = () => {
       </View>
       <View style={styles.containerRow}>
         <View style={styles.leftBox} />
-        <TouchableOpacity style={styles.loginButton}>
+        <TouchableOpacity
+          style={styles.loginButton}
+          onPress={() => navigation.navigate("LogIn")}
+        >
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
       </View>
 
       <View style={styles.containerRow}>
         <View style={styles.emptyLeftBox} />
-        <TouchableOpacity style={styles.signupButton}>
+        <TouchableOpacity
+          style={styles.signupButton}
+          onPress={() => navigation.navigate("SignUp")}
+        >
           <Text style={styles.signupText}>SIGNUP</Text>
         </TouchableOpacity>
       </View>
