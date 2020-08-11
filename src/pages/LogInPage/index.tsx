@@ -3,12 +3,16 @@ import { View, Image, Text, TouchableOpacity, StyleSheet } from "react-native";
 
 const logo = require("../../img/krds-logo.svg");
 
+import Input from "../../components/Input";
+
 const LogInPage = ({ navigation }) => {
   return (
     <View>
       <View style={styles.container}>
         <Image source={logo} style={styles.logo} />
         <Text style={styles.title}>LOGIN</Text>
+        <Input name="username" placeholder="username" />
+        <Input name="password" placeholder="password" />
       </View>
       <View style={styles.containerRow}>
         <View style={styles.leftBox} />
@@ -38,6 +42,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 70,
     marginLeft: 50,
+    paddingBottom: 22,
     borderTopColor: "#BF2D5B",
     borderLeftColor: "#BF2D5B",
     borderTopLeftRadius: 50,
@@ -53,7 +58,7 @@ const styles = StyleSheet.create({
     width: 172,
   },
   title: {
-    fontSize: 24,
+    fontSize: 20,
     color: "#61468F",
     alignSelf: "flex-start",
     marginTop: 50,
