@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 70,
     marginLeft: 50,
-    paddingBottom: 22,
+    paddingBottom: 52,
     borderTopColor: "#BF2D5B",
     borderLeftColor: "#BF2D5B",
     borderTopLeftRadius: 50,
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   logo: {
-    marginTop: 70,
+    marginTop: 50,
     height: 123,
     width: 172,
   },
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     color: "#61468F",
     alignSelf: "flex-start",
     marginTop: 50,
-    marginBottom: 30,
+    marginBottom: 20,
     marginLeft: 35,
   },
   containerRow: {
