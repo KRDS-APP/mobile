@@ -18,7 +18,7 @@ const LogInPage = ({ navigation }) => {
         <View style={styles.leftBox} />
         <TouchableOpacity
           style={styles.loginButton}
-          onPress={() => navigation.navigate("LogIn")}
+          onPress={() => navigation.navigate("Home")}
         >
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
