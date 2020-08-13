@@ -1,15 +1,14 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
+import Header from "../../components/Header";
 import Input from "../../components/Input";
 import Menu from "../../components/Menu";
 
 const EditCard = ({ navigation }) => {
   return (
     <View>
-      <View style={styles.titleContainer}>
-        <Text style={styles.title}>EDIT KRD</Text>
-      </View>
+      <Header>EDIT KRD</Header>
       <View style={styles.containerRow}>
         <View style={styles.leftBox} />
         <View style={styles.subtitleContainer}>
@@ -43,24 +42,6 @@ const EditCard = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flex: 1,
-    marginTop: 70,
-    marginLeft: 50,
-    borderTopColor: "#BF2D5B",
-    borderLeftColor: "#BF2D5B",
-    borderTopLeftRadius: 50,
-    borderLeftWidth: 1,
-    borderTopWidth: 1,
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  title: {
-    color: "#7C1A38",
-    fontSize: 24,
-    padding: 25,
-  },
   containerRow: {
     display: "flex",
     flexDirection: "row",
