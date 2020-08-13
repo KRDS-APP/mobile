@@ -19,22 +19,14 @@ const DetailCard = ({ navigation }) => {
       <View style={styles.containerRow}>
         <View style={styles.mainLeftBox} />
         <View style={styles.mainContainer}>
-          <Input
-            name="companyname"
-            placeholder="company name"
-            style={styles.input}
-          />
-          <Input name="number" placeholder="card number" style={styles.input} />
+          <Text style={styles.cardNumber}>1234 5678 9012 3456</Text>
         </View>
       </View>
 
       <View style={styles.containerRow}>
         <View style={styles.emptyLeftBox} />
         <TouchableOpacity style={styles.editButton}>
-          <Text style={styles.addButtonText}>EDIT</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.deleteButton}>
-          <Text style={styles.addButtonText}>DELETE</Text>
+          <Text style={styles.editButtonText}>EDIT</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.containerRow}>
@@ -126,6 +118,11 @@ const styles = StyleSheet.create({
     paddingLeft: 35,
     paddingRight: 50,
   },
+  cardNumber: {
+    textAlign: "left",
+    fontSize: 18,
+    color: "#7C1A38",
+  },
   input: {
     width: "100%",
     height: 30,
@@ -148,23 +145,12 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderLeftColor: "#CF6F3A",
     borderLeftWidth: 1,
-    borderRightColor: "#CF6F3A",
-    borderRightWidth: 1,
     borderBottomLeftRadius: 40,
     textAlign: "right",
     padding: 19,
     paddingRight: 50,
   },
-  deleteButton: {
-    flex: 1,
-    justifyContent: "center",
-    borderBottomColor: "#CF6F3A",
-    borderBottomWidth: 1,
-    textAlign: "right",
-    padding: 19,
-    paddingRight: 50,
-  },
-  addButtonText: {
+  editButtonText: {
     fontSize: 18,
     color: "#CF6F3A",
   },
