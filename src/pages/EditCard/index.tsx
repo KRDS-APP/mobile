@@ -2,11 +2,13 @@ import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
-const DetailCard = ({ navigation }) => {
+import Input from "../../components/Input";
+
+const EditCard = ({ navigation }) => {
   return (
     <View>
       <View style={styles.titleContainer}>
-        <Text style={styles.title}>KRD DETAIL</Text>
+        <Text style={styles.title}>EDIT KRD</Text>
       </View>
       <View style={styles.containerRow}>
         <View style={styles.leftBox} />
@@ -17,17 +19,22 @@ const DetailCard = ({ navigation }) => {
       <View style={styles.containerRow}>
         <View style={styles.mainLeftBox} />
         <View style={styles.mainContainer}>
-          <Text style={styles.cardNumber}>1234 5678 9012 3456</Text>
+          <Input
+            name="companyname"
+            placeholder="company name"
+            style={styles.input}
+          />
+          <Input name="number" placeholder="card number" style={styles.input} />
         </View>
       </View>
 
       <View style={styles.containerRow}>
         <View style={styles.emptyLeftBox} />
-        <TouchableOpacity
-          style={styles.editButton}
-          onPress={() => navigation.navigate("EditCard")}
-        >
-          <Text style={styles.editButtonText}>EDIT</Text>
+        <TouchableOpacity style={styles.editButton}>
+          <Text style={styles.editButtonText}>SAVE</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.deleteButton}>
+          <Text style={styles.editButtonText}>DELETE</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.containerRow}>
@@ -151,6 +158,17 @@ const styles = StyleSheet.create({
     padding: 19,
     paddingRight: 50,
   },
+  deleteButton: {
+    flex: 1,
+    justifyContent: "center",
+    borderBottomColor: "#CF6F3A",
+    borderBottomWidth: 1,
+    borderLeftColor: "#CF6F3A",
+    borderLeftWidth: 1,
+    textAlign: "right",
+    padding: 19,
+    paddingRight: 50,
+  },
   editButtonText: {
     fontSize: 18,
     color: "#CF6F3A",
@@ -184,4 +202,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DetailCard;
+export default EditCard;
