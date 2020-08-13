@@ -8,6 +8,7 @@ import Home from "../pages/Home";
 import AddCard from "../pages/AddCard";
 import DetailCard from "../pages/DetailCard";
 import EditCard from "../pages/EditCard";
+import Profile from "../pages/Profile";
 
 const Auth = createStackNavigator();
 
@@ -27,6 +28,7 @@ const AuthRoutes: React.FC = () => (
     <Auth.Screen name="AddCard" component={AddCard} />
     <Auth.Screen name="DetailCard" component={DetailCard} />
     <Auth.Screen name="EditCard" component={EditCard} />
+    <Auth.Screen name="Profile" component={Profile} />
   </Auth.Navigator>
 );
 
