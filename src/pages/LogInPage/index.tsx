@@ -3,22 +3,22 @@ import { View, Image, Text, TouchableOpacity, StyleSheet } from "react-native";
 
 const logo = require("../../img/krds-logo.svg");
 
-const LandingPage = ({ navigation }) => {
+import Input from "../../components/Input";
+
+const LogInPage = ({ navigation }) => {
   return (
     <View>
       <View style={styles.container}>
         <Image source={logo} style={styles.logo} />
-        <Text style={styles.intro}>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua.
-        </Text>
+        <Text style={styles.title}>LOGIN</Text>
+        <Input name="username" placeholder="username" />
+        <Input name="password" placeholder="password" />
       </View>
       <View style={styles.containerRow}>
         <View style={styles.leftBox} />
         <TouchableOpacity
           style={styles.loginButton}
-          onPress={() => navigation.navigate("LogIn")}
+          onPress={() => navigation.navigate("Home")}
         >
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
@@ -28,9 +28,9 @@ const LandingPage = ({ navigation }) => {
         <View style={styles.emptyLeftBox} />
         <TouchableOpacity
           style={styles.signupButton}
-          onPress={() => navigation.navigate("SignUp")}
+          onPress={() => navigation.goBack()}
         >
-          <Text style={styles.signupText}>SIGNUP</Text>
+          <Text style={styles.signupText}>GO BACK</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 70,
     marginLeft: 50,
+    paddingBottom: 52,
     borderTopColor: "#BF2D5B",
     borderLeftColor: "#BF2D5B",
     borderTopLeftRadius: 50,
@@ -52,17 +53,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   logo: {
-    marginTop: 70,
+    marginTop: 50,
     height: 123,
     width: 172,
   },
-  intro: {
-    flex: 1,
-    marginTop: 70,
-    marginBottom: 70,
-    maxWidth: 230,
-    color: "#C2BDC9",
-    textAlign: "center",
+  title: {
+    fontSize: 20,
+    color: "#61468F",
+    alignSelf: "flex-start",
+    marginTop: 50,
+    marginBottom: 20,
+    marginLeft: 35,
   },
   containerRow: {
     display: "flex",
@@ -115,4 +116,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LandingPage;
+export default LogInPage;
