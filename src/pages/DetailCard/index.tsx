@@ -1,7 +1,8 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 import Header from "../../components/Header";
+import BottomButton from "../../components/BottomButton";
 import Menu from "../../components/Menu";
 
 const DetailCard = ({ navigation }) => {
@@ -21,15 +22,10 @@ const DetailCard = ({ navigation }) => {
         </View>
       </View>
 
-      <View style={styles.containerRow}>
-        <View style={styles.emptyLeftBox} />
-        <TouchableOpacity
-          style={styles.editButton}
-          onPress={() => navigation.navigate("EditCard")}
-        >
-          <Text style={styles.editButtonText}>EDIT</Text>
-        </TouchableOpacity>
-      </View>
+      <BottomButton onPress={() => navigation.navigate("EditCard")}>
+        EDIT
+      </BottomButton>
+
       <Menu navigation={navigation} />
     </View>
   );
@@ -102,26 +98,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     marginBottom: 40,
     marginRight: 50,
-  },
-  emptyLeftBox: {
-    height: 50,
-    width: 50,
-  },
-  editButton: {
-    flex: 1,
-    justifyContent: "center",
-    borderBottomColor: "#CF6F3A",
-    borderBottomWidth: 1,
-    borderLeftColor: "#CF6F3A",
-    borderLeftWidth: 1,
-    borderBottomLeftRadius: 40,
-    textAlign: "right",
-    padding: 19,
-    paddingRight: 50,
-  },
-  editButtonText: {
-    fontSize: 18,
-    color: "#CF6F3A",
   },
 });
 

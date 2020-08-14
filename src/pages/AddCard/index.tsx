@@ -1,8 +1,9 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 
 import Header from "../../components/Header";
 import Input from "../../components/Input";
+import BottomButton from "../../components/BottomButton";
 import Menu from "../../components/Menu";
 
 const AddCards = ({ navigation }) => {
@@ -21,12 +22,9 @@ const AddCards = ({ navigation }) => {
         </View>
       </View>
 
-      <View style={styles.containerRow}>
-        <View style={styles.emptyLeftBox} />
-        <TouchableOpacity style={styles.addButton}>
-          <Text style={styles.addButtonText}>ADD</Text>
-        </TouchableOpacity>
-      </View>
+      <BottomButton onPress={() => navigation.navigate("Home")}>
+        ADD
+      </BottomButton>
       <Menu navigation={navigation} />
     </View>
   );
@@ -70,26 +68,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     marginBottom: 40,
     marginRight: 50,
-  },
-  emptyLeftBox: {
-    height: 50,
-    width: 50,
-  },
-  addButton: {
-    flex: 1,
-    justifyContent: "center",
-    borderBottomColor: "#CF6F3A",
-    borderBottomWidth: 1,
-    borderLeftColor: "#CF6F3A",
-    borderLeftWidth: 1,
-    borderBottomLeftRadius: 40,
-    textAlign: "right",
-    padding: 19,
-    paddingRight: 50,
-  },
-  addButtonText: {
-    fontSize: 18,
-    color: "#CF6F3A",
   },
 });
 
