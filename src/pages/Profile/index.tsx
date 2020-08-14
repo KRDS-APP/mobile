@@ -19,9 +19,9 @@ const Profile = ({ navigation }) => {
       <View style={styles.containerRow}>
         <View style={styles.mainLeftBox} />
         <View style={styles.mainContainer}>
-          <Input name="username" placeholder="username" style={styles.input} />
-          <Input name="email" placeholder="email" style={styles.input} />
-          <Input name="password" placeholder="password" style={styles.input} />
+          <Input icon="person" name="username" placeholder="username" />
+          <Input icon="email" name="email" placeholder="email" />
+          <Input icon="lock" name="password" placeholder="password" />
         </View>
       </View>
 
@@ -59,17 +59,6 @@ const styles = StyleSheet.create({
     paddingTop: 30,
     paddingLeft: 35,
     paddingRight: 50,
-  },
-  input: {
-    width: "100%",
-    height: 30,
-    padding: 5,
-    color: "#61468F",
-
-    borderBottomColor: "#962623",
-    borderBottomWidth: 1,
-    marginBottom: 40,
-    marginRight: 50,
   },
 });
 

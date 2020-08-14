@@ -18,12 +18,8 @@ const EditCard = ({ navigation }) => {
       <View style={styles.containerRow}>
         <View style={styles.mainLeftBox} />
         <View style={styles.mainContainer}>
-          <Input
-            name="companyname"
-            placeholder="company name"
-            style={styles.input}
-          />
-          <Input name="number" placeholder="card number" style={styles.input} />
+          <Input icon="store" name="companyname" placeholder="company name" />
+          <Input icon="dialpad" name="number" placeholder="card number" />
         </View>
       </View>
 
@@ -66,21 +62,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
     fontSize: 18,
     color: "#7C1A38",
-  },
-  input: {
-    width: "100%",
-    height: 30,
-    padding: 5,
-    color: "#61468F",
-
-    borderBottomColor: "#962623",
-    borderBottomWidth: 1,
-    marginBottom: 40,
-    marginRight: 50,
-  },
-  emptyLeftBox: {
-    height: 50,
-    width: 50,
   },
 });
 
