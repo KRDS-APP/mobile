@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 import Header from "../../components/Header";
+import Box from "../../components/Box";
 import BottomButton from "../../components/BottomButton";
 import Menu from "../../components/Menu";
 
@@ -9,12 +10,9 @@ const DetailCard = ({ navigation }) => {
   return (
     <View>
       <Header>KRD DETAIL</Header>
-      <View style={styles.containerRow}>
-        <View style={styles.leftBox} />
-        <View style={styles.subtitleContainer}>
-          <Text style={styles.subtitleText}>COMPANY NAME</Text>
-        </View>
-      </View>
+      <Box>
+        <Text style={styles.subtitleText}>COMPANY NAME</Text>
+      </Box>
       <View style={styles.containerRow}>
         <View style={styles.mainLeftBox} />
         <View style={styles.mainContainer}>
@@ -36,36 +34,11 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
   },
-  subtitleContainer: {
-    flex: 1,
-    height: 60,
-    borderTopColor: "#7C1A38",
-    borderTopWidth: 1,
-    borderBottomColor: "#7C1A38",
-    borderBottomWidth: 1,
-    borderLeftColor: "#CF6F3A",
-    borderLeftWidth: 1,
-
-    textAlign: "right",
-    padding: 15,
-    paddingRight: 50,
-  },
   subtitleText: {
     color: "#7C1A38",
-    alignSelf: "flex-start",
-    marginTop: 5,
-    marginLeft: 15,
-  },
-  leftBox: {
-    borderTopColor: "#962623",
-    borderTopWidth: 1,
-    borderBottomColor: "#962623",
-    borderBottomWidth: 1,
-    width: 50,
-    height: 60,
   },
   mainLeftBox: {
-    borderBottomColor: "#962623",
+    borderBottomColor: "#7C1A38",
     borderBottomWidth: 1,
     width: 50,
     height: 290,
