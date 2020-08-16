@@ -30,8 +30,11 @@ const LandingPage = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 70,
-    marginLeft: 50,
+    marginTop: "8vh",
+    marginLeft: "10vw",
+    maxHeight: "67vh",
+    minHeight: "67vh",
+    paddingBottom: "10vh",
     borderTopColor: "#BF2D5B",
     borderLeftColor: "#BF2D5B",
     borderTopLeftRadius: 50,
@@ -42,14 +45,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   logo: {
-    marginTop: 70,
+    marginTop: "10vh",
+    marginBottom: "10vh",
     height: 123,
     width: 172,
   },
   intro: {
     flex: 1,
-    marginTop: 70,
-    marginBottom: 70,
+    marginBottom: "10vh",
     maxWidth: 230,
     color: "#918B9B",
     textAlign: "center",

@@ -18,12 +18,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   emptyLeftBox: {
-    height: 50,
-    width: 50,
+    height: "8vh",
+    width: "10vw",
   },
   button: {
     flex: 1,
-    height: 50,
+    height: "8vh",
     borderBottomColor: "#CF6F3A",
     borderBottomWidth: 1,
     borderLeftColor: "#CF6F3A",
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 40,
 
     textAlign: "right",
-    padding: 15,
+    justifyContent: "center",
     paddingRight: 50,
   },
   text: {

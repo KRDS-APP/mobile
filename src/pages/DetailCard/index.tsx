@@ -40,12 +40,12 @@ const styles = StyleSheet.create({
   mainLeftBox: {
     borderBottomColor: "#7C1A38",
     borderBottomWidth: 1,
-    width: 50,
-    height: 290,
+    width: "10vw",
+    height: "55vh",
   },
   mainContainer: {
     flex: 1,
-    height: 290,
+    height: "55vh",
     borderBottomColor: "#7C1A38",
     borderBottomWidth: 1,
     borderLeftColor: "#CF6F3A",
@@ -60,17 +60,6 @@ const styles = StyleSheet.create({
     textAlign: "left",
     fontSize: 18,
     color: "#7C1A38",
-  },
-  input: {
-    width: "100%",
-    height: 30,
-    padding: 5,
-    color: "#61468F",
-
-    borderBottomColor: "#962623",
-    borderBottomWidth: 1,
-    marginBottom: 40,
-    marginRight: 50,
   },
 });
 

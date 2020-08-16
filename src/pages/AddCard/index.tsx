@@ -13,12 +13,8 @@ const AddCards = ({ navigation }) => {
       <View style={styles.containerRow}>
         <View style={styles.leftBox} />
         <View style={styles.mainContainer}>
-          <Input
-            name="companyname"
-            placeholder="company name"
-            style={styles.input}
-          />
-          <Input name="number" placeholder="card number" style={styles.input} />
+          <Input icon="store" name="companyname" placeholder="company name" />
+          <Input icon="dialpad" name="number" placeholder="card number" />
         </View>
       </View>
 
@@ -40,12 +36,12 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderBottomColor: "#962623",
     borderBottomWidth: 1,
-    width: 50,
-    height: 350,
+    width: "10vw",
+    height: "65vh",
   },
   mainContainer: {
     flex: 1,
-    height: 350,
+    height: "65vh",
     borderTopColor: "#7C1A38",
     borderTopWidth: 1,
     borderBottomColor: "#7C1A38",
@@ -57,17 +53,6 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     paddingLeft: 35,
     paddingRight: 50,
-  },
-  input: {
-    width: "100%",
-    height: 30,
-    padding: 5,
-    color: "#61468F",
-
-    borderBottomColor: "#962623",
-    borderBottomWidth: 1,
-    marginBottom: 40,
-    marginRight: 50,
   },
 });
 

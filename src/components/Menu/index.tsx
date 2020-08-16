@@ -1,7 +1,7 @@
 import React from "react";
 import { View, TouchableOpacity, StyleSheet } from "react-native";
-
-import { Feather } from "@expo/vector-icons";
+import IconMCI from "react-native-vector-icons/MaterialCommunityIcons";
+import IconMI from "react-native-vector-icons/MaterialIcons";
 
 const Menu = ({ navigation }) => {
   return (
@@ -9,16 +9,16 @@ const Menu = ({ navigation }) => {
       <View style={styles.emptyLeftBox} />
       <View style={styles.menuConainer}>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-          <Feather name="credit-card" style={styles.icons} />
+          <IconMCI name="card-text" style={styles.icons} />
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.circle}
           onPress={() => navigation.navigate("AddCard")}
         >
-          <Feather name="plus" style={styles.plusIcon} />
+          <IconMCI name="plus" style={styles.plusIcon} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
-          <Feather name="user" style={styles.icons} />
+          <IconMI name="person" style={styles.icons} />
         </TouchableOpacity>
       </View>
     </View>
@@ -29,37 +29,37 @@ const styles = StyleSheet.create({
   containerRow: {
     display: "flex",
     flexDirection: "row",
+    width: "100vw",
   },
   emptyLeftBox: {
-    height: 50,
-    width: 50,
+    width: "10vw",
   },
   menuConainer: {
-    width: 300,
+    width: "90vw",
+    height: "10vh",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-evenly",
-    marginTop: 22,
-    marginLeft: -5,
   },
   circle: {
-    width: 70,
-    height: 70,
-    backgroundColor: "white",
+    width: 55,
+    height: 55,
+    backgroundColor: "#FFF",
     borderRadius: 50,
-    borderColor: "#7C1A38",
+    borderColor: "#BF2D5B",
     borderWidth: 1,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: -34,
+    marginTop: -10,
   },
   plusIcon: {
-    color: "#7C1A38",
+    color: "#BF2D5B",
     fontSize: 40,
   },
   icons: {
     fontSize: 30,
-    color: "#7C1A38",
+    color: "#BF2D5B",
+    padding: 10,
   },
 });
 

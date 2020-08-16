@@ -22,12 +22,12 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderBottomColor: "#962623",
     borderBottomWidth: 1,
-    width: 50,
-    height: 50,
+    width: "10vw",
+    height: "8vh",
   },
   loginButton: {
     flex: 1,
-    height: 50,
+    height: "8vh",
     borderTopColor: "#7C1A38",
     borderTopWidth: 1,
     borderBottomColor: "#7C1A38",
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     borderLeftWidth: 1,
 
     textAlign: "right",
-    padding: 15,
+    justifyContent: "center",
     paddingRight: 50,
   },
   loginText: {

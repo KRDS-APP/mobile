@@ -11,22 +11,21 @@ const Header = ({ children }) => {
 
 const styles = StyleSheet.create({
   titleContainer: {
-    flex: 1,
-    marginTop: 70,
-    marginLeft: 50,
+    height: "10vh",
+    marginTop: "8vh",
+    marginLeft: "10vw",
     borderTopColor: "#BF2D5B",
     borderLeftColor: "#BF2D5B",
     borderTopLeftRadius: 50,
     borderLeftWidth: 1,
     borderTopWidth: 1,
-    flexDirection: "column",
+    flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
   },
   title: {
     color: "#7C1A38",
     fontSize: 24,
-    padding: 25,
   },
 });
 
