@@ -44,12 +44,12 @@ const styles = StyleSheet.create({
     color: "#7C1A38",
   },
   mainLeftBox: {
-    width: 50,
-    height: 290,
+    width: "10vw",
+    height: "47vh",
   },
   mainContainer: {
     flex: 1,
-    height: 290,
+    height: "47vh",
     borderLeftColor: "#CF6F3A",
     borderLeftWidth: 1,
 

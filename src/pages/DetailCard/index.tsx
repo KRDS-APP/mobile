@@ -40,12 +40,12 @@ const styles = StyleSheet.create({
   mainLeftBox: {
     borderBottomColor: "#7C1A38",
     borderBottomWidth: 1,
-    width: 50,
-    height: 290,
+    width: "10vw",
+    height: "55vh",
   },
   mainContainer: {
     flex: 1,
-    height: 290,
+    height: "55vh",
     borderBottomColor: "#7C1A38",
     borderBottomWidth: 1,
     borderLeftColor: "#CF6F3A",

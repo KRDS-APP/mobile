@@ -29,12 +29,14 @@ const styles = StyleSheet.create({
   containerRow: {
     display: "flex",
     flexDirection: "row",
+    width: "100vw",
   },
   emptyLeftBox: {
-    width: "10%",
+    width: "10vw",
   },
   menuConainer: {
-    width: "90%",
+    width: "90vw",
+    height: "10vh",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-evenly",

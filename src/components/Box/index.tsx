@@ -12,6 +12,7 @@ const Box = ({ children }) => {
 
 const styles = StyleSheet.create({
   containerRow: {
+    height: "10vh",
     display: "flex",
     flexDirection: "row",
   },
@@ -20,12 +21,12 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderBottomColor: "#962623",
     borderBottomWidth: 1,
-    width: 50,
-    height: 60,
+    width: "10vw",
+    // height: "10vh",
   },
   subtitleContainer: {
     flex: 1,
-    height: 60,
+    // height: "10vh",s
     justifyContent: "center",
     paddingLeft: 30,
 

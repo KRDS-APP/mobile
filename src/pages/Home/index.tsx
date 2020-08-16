@@ -30,6 +30,20 @@ const Home = ({ navigation }) => {
             <Text style={styles.cardText}>Company name here</Text>
             <Text style={styles.cardNumber}>1234 5678 9012 3456</Text>
           </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.cardContainer}
+            onPress={() => navigation.navigate("DetailCard")}
+          >
+            <Text style={styles.cardText}>Company name here</Text>
+            <Text style={styles.cardNumber}>1234 5678 9012 3456</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.cardContainer}
+            onPress={() => navigation.navigate("DetailCard")}
+          >
+            <Text style={styles.cardText}>Company name here</Text>
+            <Text style={styles.cardNumber}>1234 5678 9012 3456</Text>
+          </TouchableOpacity>
         </View>
       </View>
       <Menu navigation={navigation} />
@@ -41,33 +55,33 @@ const styles = StyleSheet.create({
   containerRow: {
     display: "flex",
     flexDirection: "row",
+    height: "63vh",
   },
   emptyLeftBox: {
-    height: 50,
-    width: 50,
+    width: "10vw",
   },
   subtitleText: {
     color: "#7C1A38",
   },
   mainContainer: {
     flex: 1,
-    height: 350,
+    alignItems: "center",
+    width: "90vw",
     borderBottomColor: "#CF6F3A",
     borderBottomWidth: 1,
     borderLeftColor: "#CF6F3A",
     borderLeftWidth: 1,
     borderBottomLeftRadius: 40,
 
-    textAlign: "right",
     paddingTop: 25,
-    paddingLeft: 25,
+    overflow: "scroll",
   },
   cardContainer: {
     flexDirection: "column",
     alignItems: "flex-start",
     justifyContent: "space-between",
-    width: 240,
-    height: 140,
+    width: "75%",
+    height: "30%",
     padding: 25,
     marginBottom: 20,
     borderColor: "#CF6F3A",
