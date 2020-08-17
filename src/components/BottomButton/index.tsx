@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import Icon from "react-native-vector-icons/MaterialIcons";
 
 const BottomButton = ({ children, onPress }) => {
   return (
@@ -7,6 +8,7 @@ const BottomButton = ({ children, onPress }) => {
       <View style={styles.emptyLeftBox} />
       <TouchableOpacity style={styles.button} onPress={onPress}>
         <Text style={styles.text}>{children}</Text>
+        <Icon name="keyboard-arrow-right" style={styles.arrowIcon} />
       </TouchableOpacity>
     </View>
   );
@@ -23,6 +25,9 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
     height: "8vh",
     borderBottomColor: "#CF6F3A",
     borderBottomWidth: 1,
@@ -31,11 +36,15 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 40,
 
     textAlign: "right",
-    justifyContent: "center",
     paddingRight: 50,
   },
   text: {
     color: "#CF6F3A",
+  },
+  arrowIcon: {
+    fontSize: 15,
+    color: "#CF6F3A",
+    marginLeft: 2,
   },
 });
 

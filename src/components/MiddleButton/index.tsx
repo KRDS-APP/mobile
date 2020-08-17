@@ -1,12 +1,14 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import Icon from "react-native-vector-icons/MaterialIcons";
 
 const MiddleButton = ({ children, onPress }) => {
   return (
     <View style={styles.containerRow}>
-      <View style={styles.leftBox} />
-      <TouchableOpacity style={styles.loginButton} onPress={onPress}>
-        <Text style={styles.loginText}>{children}</Text>
+      <View style={styles.emptyLeftBox} />
+      <TouchableOpacity style={styles.button} onPress={onPress}>
+        <Text style={styles.text}>{children}</Text>
+        <Icon name="keyboard-arrow-right" style={styles.arrowIcon} />
       </TouchableOpacity>
     </View>
   );
@@ -17,7 +19,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
   },
-  leftBox: {
+  emptyLeftBox: {
     borderTopColor: "#962623",
     borderTopWidth: 1,
     borderBottomColor: "#962623",
@@ -25,8 +27,11 @@ const styles = StyleSheet.create({
     width: "10vw",
     height: "8vh",
   },
-  loginButton: {
+  button: {
     flex: 1,
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
     height: "8vh",
     borderTopColor: "#7C1A38",
     borderTopWidth: 1,
@@ -36,11 +41,15 @@ const styles = StyleSheet.create({
     borderLeftWidth: 1,
 
     textAlign: "right",
-    justifyContent: "center",
     paddingRight: 50,
   },
-  loginText: {
+  text: {
     color: "#7C1A38",
+  },
+  arrowIcon: {
+    fontSize: 15,
+    color: "#7C1A38",
+    marginLeft: 2,
   },
 });
 
