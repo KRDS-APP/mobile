@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 
 import Header from "../../components/Header";
 import Box from "../../components/Box";
+import Main55 from "../../components/Main55";
 import BottomButton from "../../components/BottomButton";
 import Menu from "../../components/Menu";
 
@@ -13,12 +14,9 @@ const DetailCard = ({ navigation }) => {
       <Box>
         <Text style={styles.subtitleText}>COMPANY NAME</Text>
       </Box>
-      <View style={styles.containerRow}>
-        <View style={styles.mainLeftBox} />
-        <View style={styles.mainContainer}>
-          <Text style={styles.cardNumber}>1234 5678 9012 3456</Text>
-        </View>
-      </View>
+      <Main55>
+        <Text style={styles.cardNumber}>1234 5678 9012 3456</Text>
+      </Main55>
 
       <BottomButton onPress={() => navigation.navigate("EditCard")}>
         EDIT
@@ -30,31 +28,8 @@ const DetailCard = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  containerRow: {
-    display: "flex",
-    flexDirection: "row",
-  },
   subtitleText: {
     color: "#7C1A38",
-  },
-  mainLeftBox: {
-    borderBottomColor: "#7C1A38",
-    borderBottomWidth: 1,
-    width: "10vw",
-    height: "55vh",
-  },
-  mainContainer: {
-    flex: 1,
-    height: "55vh",
-    borderBottomColor: "#7C1A38",
-    borderBottomWidth: 1,
-    borderLeftColor: "#CF6F3A",
-    borderLeftWidth: 1,
-
-    textAlign: "right",
-    paddingTop: 50,
-    paddingLeft: 35,
-    paddingRight: 50,
   },
   cardNumber: {
     textAlign: "left",
